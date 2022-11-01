@@ -1,0 +1,5 @@
+.git/
+.idea/
+http_example.iml
+data.jason
+target/
