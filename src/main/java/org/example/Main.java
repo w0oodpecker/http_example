@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -40,7 +41,7 @@ public class Main {
         Type factOfCatType = new TypeToken<ArrayList<FactOfCat>>() {
         }.getType();
         List<FactOfCat> factOfCatList = gson.fromJson(body, factOfCatType);
-        List<FactOfCat> tmp = factOfCatList.stream().filter(value -> value.getUpvotes() != null && value.getUpvotes() == 0).toList();
+        List<FactOfCat> tmp = factOfCatList.stream().filter(value -> value.getUpvotes() == null || value.getUpvotes().equals(0)).toList();
         System.out.println(tmp.toString());
     }
 }

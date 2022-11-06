@@ -13,7 +13,7 @@ public class FactOfCat {
     @SerializedName("user")
     private String user; // - имя пользователя
     @SerializedName("upvotes")
-    private int upvotes; // - голоса
+    private Integer upvotes; // - голоса
 
 
     public FactOfCat(
